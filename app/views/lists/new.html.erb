@@ -1,0 +1,9 @@
+<h1>Lists</h1>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+<button> <%= f.button :submit %> </button>
+<% end %>
+
+
+<button> <%= link_to 'Comeback to homepage', lists_path %> </button>
