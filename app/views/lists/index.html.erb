@@ -1,33 +1,22 @@
 <div class="container my-5">
-<h1>Movies' list</h1>
-
-<div>
-<button> <%= link_to 'New list', new_list_path %> </button>
-</div>
-
-
-
-<div class="cards">
-
-
-<% @lists.each do |list| %>
-
-   <div class="card-movie">
-
-<% if  list.bookmarks.empty?%>
-<img src="https://static.wixstatic.com/media/a5fa965aed6aa75b466d20ffe5d3aa3b.jpg/v1/fill/w_280,h_186,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/bobine%20de%20film.jpg" />
-
-<% else %>
-    <img src="<%= list.bookmarks.first.movie.poster_url %>" />
-<% end %>
-
-
-    <div class="card-movie-infos">
-      <div>
-        <h2> <div> <%= link_to list.name, list_path(list) %> </div></h2>
+  <h1>Movies' list</h1>
+  <div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-movie">
+  <% if  list.bookmarks.empty?%>
+  <img src="https://static.wixstatic.com/media/a5fa965aed6aa75b466d20ffe5d3aa3b.jpg/v1/fill/w_280,h_186,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/bobine%20de%20film.jpg" />
+  <% else %>
+      <img src="<%= list.bookmarks.first.movie.poster_url %>" />
+  <% end %>
+      <div class="card-movie-infos">
+        <div>
+          <h2> <div> <%= link_to list.name, list_path(list) %> </div></h2>
+        </div>
       </div>
     </div>
+  <% end %>
   </div>
-<% end %>
-</div>
+  <div>
+    <button class="button_new_list"> <%= link_to 'New list', new_list_path %> </button>
+  </div>
 </div>

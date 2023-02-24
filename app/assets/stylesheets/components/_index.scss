@@ -4,8 +4,20 @@
 @import "form_legend_clear";
 @import "navbar";
 @import "card";
+@import "button";
 
 body {
   background-color: black;
   color: white;
+}
+
+a {
+  color: white;
+  &:hover{
+    color: purple
+  }
+}
+
+.banner{
+
 }
