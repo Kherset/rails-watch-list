@@ -1,11 +1,12 @@
-<h1> Titre</h1>
+<h1> Titres</h1>
 
 
 <% @bookmarks.each do |bookmark| %>
- <p> <%= bookmark.comment %> </p>
-  <p><%= bookmark.movie.title %></p>
+  <p><%= bookmark.movie.title %> || <%= bookmark.comment %> <button> <%= link_to 'Delete', list_bookmark_path(params[:id]), data:{turbo_method: :delete} %> </button> </p>
+
 <% end %>
 
-
-<button> <%= link_to 'Comeback to homepage', root_path %> </button>
-<button> <%= link_to 'Create a new bookmark', new_list_bookmark_path(@list) %> </button>
+<div class="container">
+  <button> <%= link_to 'Comeback to homepage', root_path %> </button>
+  <button> <%= link_to 'Create a new bookmark', new_list_bookmark_path(@list) %> </button>
+</div>
