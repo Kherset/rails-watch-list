@@ -1,5 +1,11 @@
 <h1> Titre</h1>
 
 
+<% @bookmarks.each do |bookmark| %>
+ <p> <%= bookmark.comment %> </p>
+  <p><%= bookmark.movie.title %></p>
+<% end %>
+
 
 <button> <%= link_to 'Comeback to homepage', lists_path %> </button>
+<button> <%= link_to 'Create a new bookmark', new_list_bookmark_path(@list) %> </button>

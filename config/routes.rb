@@ -8,9 +8,3 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:new, :create, :delete]
   end
 end
-
-
-# lists                             GET  /lists(.:format)           lists#index
-#                                   POST /lists(.:format)           lists#create
-#                          new_list GET  /lists/new(.:format)       lists#new
-#                              list GET  /lists/:id(.:format)       lists#show
